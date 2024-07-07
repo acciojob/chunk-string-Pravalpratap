@@ -1,6 +1,6 @@
 function stringChop(str, size) {
-    // If size is less than or equal to 0, return an empty array
-    if (size <= 0) return [];
+    // If size is less than or equal to 0 or str is null, return an empty array
+    if (size <= 0 || !str) return [];
 
     // Initialize an array to store the chunks
     const chunks = [];
@@ -12,7 +12,6 @@ function stringChop(str, size) {
     
     return chunks;
 }
-
 // Do not change the code below
 const str = prompt("Enter String.");
 const size = parseInt(prompt("Enter Chunk Size."), 10);
